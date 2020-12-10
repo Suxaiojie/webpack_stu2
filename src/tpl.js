@@ -1,0 +1,1 @@
+import tpl from "./css/tpl.css";

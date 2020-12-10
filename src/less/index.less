@@ -1,0 +1,42 @@
+.div{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.mixin(@w , @dr , @color){
+    border: @w solid transparent;
+    border-@{dr}-color:@color;
+}
+ul{
+    list-style: none;
+    li{
+        float: left;
+        width: 0;
+        height: 0;
+    }
+}
+ul li:nth-child(1){
+    .mixin(50px , right , red);
+}
+ul li:nth-child(2){
+    .mixin(30px , right , blue);
+}
+ul li:nth-child(3){
+    .mixin(40px , top , red);
+}
+ul li:nth-child(4){
+    .mixin(30px , top , black);
+}
+ul li:nth-child(5){
+    .mixin(40px , left, red);
+}
+ul li:nth-child(6){
+    .mixin(30px , left, blue);
+}
+ul li:nth-child(7){
+    .mixin(40px , bottom, red);
+}
+ul li:nth-child(8){
+    .mixin(30px , bottom, blue);
+}
